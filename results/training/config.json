@@ -1,0 +1,36 @@
+{
+  "iterations": 100,
+  "games_per_iter": 128,
+  "simulations": 200,
+  "fast_simulations": 40,
+  "full_search_prob": 0.25,
+  "temperature_moves": 12,
+  "window_start": 8000,
+  "window_growth": 500,
+  "window_max": 30000,
+  "min_buffer": 3000,
+  "batch_size": 256,
+  "sample_reuse": 8.0,
+  "lr": 0.002,
+  "lr_final": 0.0002,
+  "weight_decay": 0.01,
+  "q_weight_start": 0.5,
+  "q_weight_end": 0.2,
+  "checkpoint_every": 10,
+  "seed": 0,
+  "threads": 4,
+  "workers": 4,
+  "net": {
+    "channels": 64,
+    "blocks": 4,
+    "value_hidden": 64
+  },
+  "environment": {
+    "git_sha": "057ebed593f58955614dce0809e1204526771d39",
+    "git_dirty": false,
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "numpy": "2.5.3",
+    "note": "history was squashed before publishing; the training code is identical to this commit"
+  }
+}

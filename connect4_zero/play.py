@@ -17,9 +17,9 @@ from .model import Evaluator, load_checkpoint
 
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--model", default="models/connect4_zero.pt")
-    ap.add_argument("--simulations", type=int, default=400)
-    ap.add_argument("--ai-first", action="store_true")
+    ap.add_argument("--model", default="models/connect4_zero.pt", help="path to a trained checkpoint")
+    ap.add_argument("--simulations", type=int, default=400, help="MCTS simulations per move (more = stronger, slower)")
+    ap.add_argument("--ai-first", action="store_true", help="let the AI make the first move")
     args = ap.parse_args(argv)
 
     torch.set_num_threads(4)

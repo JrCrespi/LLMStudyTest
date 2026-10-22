@@ -1,0 +1,44 @@
+[
+  {
+    "first_move": 0,
+    "score_for_first_player": -2,
+    "outcome": "loss",
+    "seconds": 86.9
+  },
+  {
+    "first_move": 1,
+    "score_for_first_player": -1,
+    "outcome": "loss",
+    "seconds": 228.1
+  },
+  {
+    "first_move": 2,
+    "score_for_first_player": 0,
+    "outcome": "draw",
+    "seconds": 185.4
+  },
+  {
+    "first_move": 3,
+    "score_for_first_player": 1,
+    "outcome": "win",
+    "seconds": 313.1
+  },
+  {
+    "first_move": 4,
+    "score_for_first_player": 0,
+    "outcome": "draw",
+    "seconds": 180.1
+  },
+  {
+    "first_move": 5,
+    "score_for_first_player": -1,
+    "outcome": "loss",
+    "seconds": 280.3
+  },
+  {
+    "first_move": 6,
+    "score_for_first_player": -2,
+    "outcome": "loss",
+    "seconds": 86.0
+  }
+]

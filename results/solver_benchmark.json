@@ -1,0 +1,218 @@
+[
+  {
+    "model": "models/connect4_zero.pt",
+    "simulations": 0,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.7533,
+    "by_ply": {
+      "10-17": 0.7639,
+      "18-25": 0.7169,
+      "26+": 0.7838
+    },
+    "value_head": {
+      "counts": {
+        "win": 1072,
+        "draw": 194,
+        "loss": 454
+      },
+      "balanced_sign_accuracy_decisive": 0.6554,
+      "win_recall": 0.6325,
+      "loss_recall": 0.6784,
+      "mean_value": {
+        "win": 0.209,
+        "draw": -0.0339,
+        "loss": -0.2895
+      }
+    }
+  },
+  {
+    "model": "models/connect4_zero.pt",
+    "simulations": 50,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.8267,
+    "by_ply": {
+      "10-17": 0.8056,
+      "18-25": 0.8253,
+      "26+": 0.9324
+    }
+  },
+  {
+    "model": "models/connect4_zero.pt",
+    "simulations": 200,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.8583,
+    "by_ply": {
+      "10-17": 0.8333,
+      "18-25": 0.8735,
+      "26+": 0.9459
+    }
+  },
+  {
+    "model": "models/connect4_zero.pt",
+    "simulations": 800,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.89,
+    "by_ply": {
+      "10-17": 0.8583,
+      "18-25": 0.9217,
+      "26+": 0.973
+    }
+  },
+  {
+    "model": "runs/main/iter_010.pt",
+    "simulations": 0,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.5283,
+    "by_ply": {
+      "10-17": 0.55,
+      "18-25": 0.4639,
+      "26+": 0.5676
+    },
+    "value_head": {
+      "counts": {
+        "win": 1072,
+        "draw": 194,
+        "loss": 454
+      },
+      "balanced_sign_accuracy_decisive": 0.5855,
+      "win_recall": 0.5103,
+      "loss_recall": 0.6608,
+      "mean_value": {
+        "win": 0.0415,
+        "draw": -0.0445,
+        "loss": -0.1107
+      }
+    }
+  },
+  {
+    "model": "runs/main/iter_010.pt",
+    "simulations": 50,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.775,
+    "by_ply": {
+      "10-17": 0.7444,
+      "18-25": 0.7952,
+      "26+": 0.8784
+    }
+  },
+  {
+    "model": "runs/main/iter_010.pt",
+    "simulations": 200,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.8217,
+    "by_ply": {
+      "10-17": 0.7889,
+      "18-25": 0.8434,
+      "26+": 0.9324
+    }
+  },
+  {
+    "model": "runs/main/iter_010.pt",
+    "simulations": 800,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.86,
+    "by_ply": {
+      "10-17": 0.8278,
+      "18-25": 0.8795,
+      "26+": 0.973
+    }
+  },
+  {
+    "model": "runs/main/iter_050.pt",
+    "simulations": 0,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.73,
+    "by_ply": {
+      "10-17": 0.7333,
+      "18-25": 0.6988,
+      "26+": 0.7838
+    },
+    "value_head": {
+      "counts": {
+        "win": 1072,
+        "draw": 194,
+        "loss": 454
+      },
+      "balanced_sign_accuracy_decisive": 0.6524,
+      "win_recall": 0.6483,
+      "loss_recall": 0.6564,
+      "mean_value": {
+        "win": 0.2173,
+        "draw": 0.0044,
+        "loss": -0.2007
+      }
+    }
+  },
+  {
+    "model": "runs/main/iter_050.pt",
+    "simulations": 50,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.8383,
+    "by_ply": {
+      "10-17": 0.8167,
+      "18-25": 0.8494,
+      "26+": 0.9189
+    }
+  },
+  {
+    "model": "runs/main/iter_050.pt",
+    "simulations": 200,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.8717,
+    "by_ply": {
+      "10-17": 0.8472,
+      "18-25": 0.8855,
+      "26+": 0.9595
+    }
+  },
+  {
+    "model": "runs/main/iter_050.pt",
+    "simulations": 800,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.8983,
+    "by_ply": {
+      "10-17": 0.8722,
+      "18-25": 0.9157,
+      "26+": 0.9865
+    }
+  },
+  {
+    "model": "random (expected)",
+    "simulations": null,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.3923
+  },
+  {
+    "model": "greedy",
+    "simulations": null,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.59,
+    "by_ply": {
+      "10-17": 0.525,
+      "18-25": 0.6566,
+      "26+": 0.7568
+    }
+  },
+  {
+    "model": "minimax-d2",
+    "simulations": null,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.8067,
+    "by_ply": {
+      "10-17": 0.7722,
+      "18-25": 0.8313,
+      "26+": 0.9189
+    }
+  },
+  {
+    "model": "minimax-d4",
+    "simulations": null,
+    "positions": 600,
+    "optimal_outcome_move_rate": 0.8417,
+    "by_ply": {
+      "10-17": 0.8194,
+      "18-25": 0.8494,
+      "26+": 0.9324
+    }
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "model": "models/connect4_zero.pt",
+  "simulations": 1600,
+  "empty_board_raw_value": 0.2831,
+  "empty_board_mcts_value": 0.1752,
+  "raw_policy_argmax": 3,
+  "mcts_choice": 3,
+  "first_moves": [
+    {
+      "first_move": 0,
+      "theory_for_first_player": "loss",
+      "raw_policy": 0.0145,
+      "raw_value_for_first_player": -0.3504,
+      "mcts_visit_share": 0.0006,
+      "mcts_q_for_first_player": -0.3504
+    },
+    {
+      "first_move": 1,
+      "theory_for_first_player": "loss",
+      "raw_policy": 0.0329,
+      "raw_value_for_first_player": -0.3608,
+      "mcts_visit_share": 0.0019,
+      "mcts_q_for_first_player": -0.3806
+    },
+    {
+      "first_move": 2,
+      "theory_for_first_player": "draw",
+      "raw_policy": 0.0091,
+      "raw_value_for_first_player": -0.2343,
+      "mcts_visit_share": 0.0006,
+      "mcts_q_for_first_player": -0.2343
+    },
+    {
+      "first_move": 3,
+      "theory_for_first_player": "win",
+      "raw_policy": 0.8917,
+      "raw_value_for_first_player": 0.3288,
+      "mcts_visit_share": 0.9944,
+      "mcts_q_for_first_player": 0.1781
+    },
+    {
+      "first_move": 4,
+      "theory_for_first_player": "draw",
+      "raw_policy": 0.0094,
+      "raw_value_for_first_player": -0.3177,
+      "mcts_visit_share": 0.0006,
+      "mcts_q_for_first_player": -0.3177
+    },
+    {
+      "first_move": 5,
+      "theory_for_first_player": "loss",
+      "raw_policy": 0.0296,
+      "raw_value_for_first_player": -0.3802,
+      "mcts_visit_share": 0.0013,
+      "mcts_q_for_first_player": -0.3964
+    },
+    {
+      "first_move": 6,
+      "theory_for_first_player": "loss",
+      "raw_policy": 0.0127,
+      "raw_value_for_first_player": -0.2914,
+      "mcts_visit_share": 0.0006,
+      "mcts_q_for_first_player": -0.2914
+    }
+  ],
+  "value_order_agrees_with_theory": false
+}

@@ -49,10 +49,11 @@ def test_minimax_finds_win_and_block():
 
 def test_minimax_ladder_is_ordered():
     # a deeper search should not lose to a shallower one on balance
-    r = match(MinimaxPlayer(4), MinimaxPlayer(1), games=20, seed=0)
+    r = match(MinimaxPlayer(4), MinimaxPlayer(1), pairs=10, seed=0)
     assert r.score > 0.6
-    r = match(GreedyPlayer(), RandomPlayer(), games=40, seed=0)
+    r = match(GreedyPlayer(), RandomPlayer(), pairs=20, seed=0)
     assert r.score > 0.7
+    assert r.games == 40 and len(r.as_first) == len(r.as_second) == 20
 
 
 def test_play_game_outcome_sign():
@@ -63,11 +64,32 @@ def test_play_game_outcome_sign():
 
 
 def test_match_result_statistics():
-    r = MatchResult(wins=30, draws=10, losses=10)
-    assert r.games == 50 and abs(r.score - 0.7) < 1e-9
+    r = MatchResult(pairs=[(1.0, 1.0)] * 10 + [(1.0, 0.5)] * 5 + [(0.0, 0.5)] * 5)
+    assert r.games == 40 and r.wins == 25 and r.draws == 10 and r.losses == 5
     lo, hi = r.score_ci()
-    assert lo < 0.7 < hi
-    assert r.elo_diff() > 0
+    assert lo < r.score < hi
+    perfect = MatchResult(pairs=[(1.0, 1.0)] * 49)
+    lo, hi = perfect.score_ci()
+    assert hi >= 1.0 - 1e-9 and 0.9 < lo < 1.0  # not a degenerate [1, 1]
+    assert perfect.as_dict()["elo_ci95"][0] > 0
+    # a slightly worse result must not get a better lower bound
+    near = MatchResult(pairs=[(1.0, 1.0)] * 47 + [(1.0, 0.5), (1.0, 0.0)])
+    assert near.score_ci()[0] < lo
+    # all pairs equal at 0.5: still a non-degenerate interval
+    lo, hi = MatchResult(pairs=[(1.0, 0.0)] * 30).score_ci()
+    assert lo < 0.5 < hi
+
+
+def test_openings_are_not_repeated():
+    seen = []
+
+    def recorder(state, rng):
+        if state.moves == 2:
+            seen.append(state.key())
+        return RandomPlayer()(state, rng)
+
+    match(recorder, RandomPlayer(), pairs=49, seed=3)
+    assert len(seen) == 49 and len(set(seen)) == 49  # each opening once (agent moves first once per pair)
 
 
 def test_network_shapes_and_masking():
